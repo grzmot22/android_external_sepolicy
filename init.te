@@ -272,6 +272,17 @@ allow init unencrypted_data_file:dir create_dir_perms;
 
 unix_socket_connect(init, vold, vold)
 
+# Allow init to call qcom specific services
+allow init surfaceflinger_service:service_manager { add find };
+
+allow init keystore_service:service_manager { add  };
+
+allow init mediaserver_service:service_manager { add find };
+
+allow init gatekeeper_service:service_manager { add  };
+
+allow init drmserver_service:service_manager { add  };
+
 ###
 ### neverallow rules
 ###
