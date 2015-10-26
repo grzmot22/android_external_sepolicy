@@ -112,6 +112,10 @@ userdebug_or_eng(`
 # for files. Suppress the denials when they occur.
 dontaudit untrusted_app exec_type:file getattr;
 
+# Our rules
+
+allow untrusted_app healthd_service:service_manager { find };
+
 ###
 ### neverallow rules
 ###

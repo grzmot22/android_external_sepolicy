@@ -66,6 +66,9 @@ allow zygote storage_file:dir { search mounton };
 # Handle --invoke-with command when launching Zygote with a wrapper command.
 allow zygote zygote_exec:file rx_file_perms;
 
+# Our rules
+allow zygote activity_service:service_manager { find };
+
 ###
 ### neverallow rules
 ###

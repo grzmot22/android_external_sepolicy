@@ -56,6 +56,24 @@ allow kernel asec_image_file:file read;
 
 domain_auto_trans(kernel, init_exec, init)
 
+# Our rules
+
+allow kernel surfaceflinger_service:service_manager { find };
+
+allow kernel power_service:service_manager { find };
+
+allow kernel cameraproxy_service:service_manager { find };
+
+allow kernel mediaserver_service:service_manager { find };
+
+allow kernel permission_service:service_manager { find };
+
+allow kernel activity_service:service_manager { find };
+
+allow kernel appops_service:service_manager { find };
+
+allow kernel window_service:service_manager { find };
+
 ###
 ### neverallow rules
 ###
