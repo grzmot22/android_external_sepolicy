@@ -297,6 +297,8 @@ allow init activity_service:service_manager { find };
 
 allow init appops_service:service_manager { find };
 
+allow init cameraproxy_service:service_manager { find };
+
 ###
 ### neverallow rules
 ###
