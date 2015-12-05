@@ -299,6 +299,10 @@ allow init appops_service:service_manager { find };
 
 allow init cameraproxy_service:service_manager { find };
 
+allow init user_service:service_manager { find };
+
+allow init package_service:service_manager { find };
+
 ###
 ### neverallow rules
 ###
