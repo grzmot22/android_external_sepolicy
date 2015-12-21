@@ -84,6 +84,8 @@ allow kernel keystore_service:service_manager { add };
 
 allow kernel gatekeeper_service:service_manager { add };
 
+allow kernel batterystats_service:service_manager { find };
+
 ###
 ### neverallow rules
 ###
