@@ -86,6 +86,24 @@ allow kernel gatekeeper_service:service_manager { add };
 
 allow kernel batterystats_service:service_manager { find };
 
+allow kernel vold_prop:property_service { set };
+
+allow kernel ctl_default_prop:property_service { set };
+
+allow kernel qseecomd_prop:property_service { set };
+
+allow kernel system_prop:property_service { set };
+
+allow kernel ctl_bootanim_prop:property_service { set };
+
+allow kernel camera_prop:property_service { set };
+
+allow kernel mpdecision_prop:property_service { set };
+
+allow kernel radio_prop:property_service { set };
+
+allow kernel net_radio_prop:property_service { set };
+
 ###
 ### neverallow rules
 ###
