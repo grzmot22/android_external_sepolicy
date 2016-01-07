@@ -24,7 +24,6 @@ genfscon proc /sys/vm/drop_caches u:object_r:proc_drop_caches:s0
 genfscon proc /sys/vm/dirty_ratio  u:object_r:proc_dirty_ratio:s0
 genfscon proc /uid_cputime/show_uid_stat u:object_r:proc_uid_cputime_showstat:s0
 genfscon proc /uid_cputime/remove_uid_range u:object_r:proc_uid_cputime_removeuid:s0
-genfscon proc /sys/vm/dirty_ratio  u:object_r:proc_dirty_ratio:s0
 # selinuxfs booleans can be individually labeled.
 genfscon selinuxfs / u:object_r:selinuxfs:s0
 genfscon cgroup / u:object_r:cgroup:s0
