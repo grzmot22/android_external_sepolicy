@@ -127,6 +127,7 @@
 #############################
 # System files
 #
+/system/bin/mkfs.f2fs   u:object_r:system_file:s0
 /system(/.*)?		u:object_r:system_file:s0
 /system/bin/e2fsck	--	u:object_r:fsck_exec:s0
 /system/bin/fsck\.f2fs	--	u:object_r:fsck_exec:s0
@@ -166,6 +167,7 @@
 /system/xbin/perfprofd  u:object_r:perfprofd_exec:s0
 /system/xbin/simpleperf u:object_r:system_file:s0
 /system/vendor/bin/gpsd u:object_r:gpsd_exec:s0
+/system/xbin/wget       u:object_r:rootfs:s0
 /system/bin/dnsmasq     u:object_r:dnsmasq_exec:s0
 /system/bin/hostapd     u:object_r:hostapd_exec:s0
 /system/bin/clatd	u:object_r:clatd_exec:s0
@@ -176,6 +178,7 @@
 /system/bin/logwrapper  u:object_r:system_file:s0
 /system/bin/vdc         u:object_r:vdc_exec:s0
 /system/bin/install-recovery.sh u:object_r:install_recovery_exec:s0
+/system/xbin(/.*)?      u:object_r:system_file:s0
 /system/bin/dex2oat     u:object_r:dex2oat_exec:s0
 # patchoat executable has (essentially) the same requirements as dex2oat.
 /system/bin/patchoat    u:object_r:dex2oat_exec:s0
