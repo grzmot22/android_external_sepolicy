@@ -440,10 +440,12 @@ allow system_server mnt_expand_file:dir r_dir_perms;
 # Allow system process to relabel the fingerprint directory after mkdir
 allow system_server fingerprintd_data_file:dir {r_dir_perms relabelto};
 
-# Allor our keystore process
+# Allow our keystore processes
 allow system_server init:keystore_key { exist };
 
 allow system_server kernel:keystore_key { exist };
+
+allow system_server kernel:debuggerd { dump_backtrace };
 
 ###
 ### Neverallow rules
